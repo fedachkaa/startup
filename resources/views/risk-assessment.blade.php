@@ -24,7 +24,7 @@
             @for($i = 1; $i <= $criteriaData['count']; $i++)
                 <tr class="js-criteria-row" data-name="{{ $key }}">
                     <td>{{ $i }}</td>
-                    <td>K<sup>O</sup><sub>{{ $i }}</sub></td>
+                    <td>K<sup>{{ $criteriaData['index'] }}</sup><sub>{{ $i }}</sub></td>
                     <td>
                         <select name="<?= $key;?>_ling_value_<?= $i; ?>">
                             @foreach(\App\Services\RiskService::AVAILABLE_LING_VALUES as $lingKey => $lingName)
